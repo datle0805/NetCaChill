@@ -11,7 +11,7 @@ export default async function Home() {
 
   // Use the first movie as hero to ensure hydration stability
   const heroMovie = trendingMovies.items[0];
-  console.log({ heroMovie })
+
   return (
     <main className="relative bg-[#141414]">
       <Navbar />

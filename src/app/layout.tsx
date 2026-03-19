@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,7 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#E50914",
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://netcachill.com'),
   title: "NetCaChill - Xem Phim Thả Ga | Netflix Clone",
   description: "Website xem phim trực tuyến chất lượng cao với hàng ngàn bộ phim mới nhất. Giao diện mượt mà, tốc độ cực nhanh.",
   keywords: "xem phim, phim moi, phim le, phim bo, netcachill, netflix clone",
@@ -31,7 +36,6 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     type: "website",
   },
-  themeColor: "#E50914",
 };
 
 export default function RootLayout({
